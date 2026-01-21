@@ -18,12 +18,10 @@ const userParam = params.get("user") || "john";
 
 const user = users[userParam];
 
-// UI update
 document.getElementById("username").innerText = user?.username ?? "Unknown";
 document.getElementById("email").innerText = user?.email ?? "Unknown";
 document.getElementById("bio").innerText = user?.bio ?? "No biography available.";
 
-// Part 3: Console-only surprise when user=admin
 if (userParam === "admin") {
     console.log("%c FLAG PART 3: S0lv!ng}", "color: #2aa8ff; font-size:14px;");
     console.log("%c 🧩 Congrats! You found the hidden admin console clue.", "color: #2aa8ff;");
